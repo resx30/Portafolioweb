@@ -1,104 +1,227 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f8f9fa;
-    color: #333;
-    line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
-/*header*/
+/* Header */
 header {
-    position: fixed;
-    width: 100%;
-    background-color: white;
-    box-shadow: 0 2px 6px rgba( 0, 0, 0, 0.1);
-    z-index: 1000;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 .navbar {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
 }
 
 .logo {
-    font-weight: bold;
-    font-size: 1.5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .nav-links {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
 }
 
-/*hero*/
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #0077b6;
+}
+
+/* Hero / portada */
 .hero {
-    padding-top: 100px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    background: linear-gradient(to bottom, #e3f2fd, #ffffff);
-    min-height: 90vh;
-    text-align: center;
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, #b3e5fc, #e1f5fe);
+  min-height: 100vh;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
 }
 
 .intro-text h1 {
-    font-size: 3rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.intro-text p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.avatar-container {
+  position: relative;
+  display: inline-block;
+  z-index: 10;
 }
 
 .avatar {
-    width: 250px;
-    animation: float 4s ease-in-out infinite;
+  width: 250px;
+  animation: float 4s ease-in-out infinite;
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0);}
-    50% {transform: translateY(-20px);}
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-20px);}
 }
 
-/*secciones*/
+/* Rayos detrás del avatar */
+.rays {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  background: conic-gradient(
+    #ffcc80 0deg 30deg,
+    transparent 30deg 60deg,
+    #ffe082 60deg 90deg,
+    transparent 90deg 120deg,
+    #ffd54f 120deg 150deg,
+    transparent 150deg 180deg,
+    #ffb74d 180deg 210deg,
+    transparent 210deg 240deg,
+    #ffcc80 240deg 270deg,
+    transparent 270deg 300deg,
+    #ffe082 300deg 330deg,
+    transparent 330deg 360deg
+  );
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate-rays 20s linear infinite;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+@keyframes rotate-rays {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Secciones */
 .section {
-    padding: 4rem 2rem;
-    max-width: 900px;
-    margin: auto;
-    text-align: center;
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
 }
 
 .section h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-
-/*footer*/
+/* Footer */
 footer {
-    background-color: #222;
-    color: white;
-    padding: 2rem;
-    text-align: center;
+  background-color: #222;
+  color: white;
+  padding: 2rem;
+  text-align: center;
 }
 
+/* Nubes SVG */
 .wave-container {
-    overflow: hidden;
-    line-height: 0;
+  overflow: hidden;
+  line-height: 0;
 }
 
 .wave-container svg {
-    display: block;
-    width: 100%;
-    height: 80px;
+  display: block;
+  width: 100%;
+  height: 150px;
 }
 
 .wave-container.flip svg {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/* Nubes redondeadas */
+.nubes {
+  height: 250px;
+  bottom: 50px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.nube {
+  position: absolute;
+  width: 150%;
+  height: 100%;
+  border-radius: 50% 50% 0 0;
+}
+
+.capa1 {
+  bottom: 0;
+  left: -25%;
+  height: 100px;
+  background: #ffffff;
+  opacity: 1;
+}
+
+.capa2 {
+  background: #cceeff;
+  bottom: 10px;
+  left: -20%;
+  height: 120px;
+  background: #f0faff;
+  opacity: 0.9;
+}
+
+.capa3 {
+  background: #a0e1f5;
+  bottom: 20px;
+  left: -10%;
+  height: 140px;
+  background: #e0f7fa;
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .intro-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .avatar {
+    width: 180px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
 }
