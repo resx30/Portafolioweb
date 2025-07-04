@@ -4,87 +4,103 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luisa | Portafolio Profesional</title>
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
+
 </head>
 <body>
-
-  <!-- Header -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">Luisa</div>
-      <ul class="nav-links">
-        <li><a href="#about">Sobre mí</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#skills">Habilidades</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
+  <!-- Cabecera -->
+  <header class="main-header">
+    <div class="header-left">Luisa</div>
+    <nav class="nav">
+      <a href="#about">Sobre mí</a>
+      <a href="#projects">Proyectos</a>
+      <a href="#skills">Habilidades</a>
+      <a href="#contact">Contacto</a>
     </nav>
+    <div class="header-right">
+      <button class="icon-button" aria-label="Buscar">
+        <i data-feather="search"></i>
+      </button>
+      <button id="theme-toggle" class="icon-button" aria-label="Modo oscuro">
+        <i data-feather="sun" id="theme-icon"></i>
+      </button>
+    </div>
   </header>
 
+
   <!-- Hero / Portada -->
-  <section class="hero">
-    <div class="intro-text">
+  <main class="main-content">
+    <section class="hero" id="about">
+      <div class="clouds"></div>
       <h1>Hola, soy Luisa</h1>
       <p>Apasionada por la tecnología, el diseño y las ideas que transforman.</p>
-    </div>
+      <img src="img/avatar.png" alt="Avatar de Luisa" class="avatar" />
+    </section>
+      <section id="about-info" class="about-info-section">
+        <h2>Sobre mí</h2>
+        <p>
+          Soy estudiante de Ingeniería Informática apasionada por la tecnología, el diseño y las ideas que transforman.
+          Me gusta aprender constantemente y construir experiencias digitales memorables.
+        </p>
+        <p>
+          Actualmente estoy desarrollando proyectos personales que combinan desarrollo web, diseño interactivo y automatización.
+        </p>
+      </section>
 
-    <div class="avatar-container">
-        <div class="rays"></div>
-      <img src="img/avatar.png" alt="Mi avatar" class="avatar" />
-    </div>
-
-    <!-- Nubes redondeadas estilo Josh -->
-    <div class="nubes">
-      <div class="nube capa1"></div>
-      <div class="nube capa2"></div>
-      <div class="nube capa3"></div>
-    </div>
-  </section>
-
-  <!-- Nube SVG hacia abajo -->
-  <div class="wave-container">
-    <svg viewBox="0 0 1440 320">
-      <path fill="#e3f2fd" fill-opacity="1" d="M0,160L80,149.3C160,139,320,117,480,106.7C640,96,800,96,960,106.7C1120,117,1280,139,1360,149.3L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
-    </svg>
+      <!-- Explorar por categoría -->
+  <section id="categorias" class="section">
+  <h2 class="titulo-categoria">Explorar por categoría</h2>
+  <div class="botones-categorias">
+    <button class="btn-cat active" data-cat="htmlcss">HTML & CSS</button>
+    <button class="btn-cat" data-cat="js">JavaScript</button>
+    <button class="btn-cat" data-cat="react">React</button>
+    <button class="btn-cat" data-cat="uiux">UI/UX</button>
+    <button class="btn-cat" data-cat="git">Git & GitHub</button>
+    <button class="btn-cat" data-cat="responsive">Responsive Design</button>
   </div>
 
-  <!-- Sobre mí -->
-  <section id="about" class="section">
-    <h2>Sobre mí</h2>
-    <p>Aquí va un texto de mí</p>
-  </section>
+  <div class="categorias-contenido">
+    <div class="categoria-bloque visible" data-cat="htmlcss">
+      <h3>HTML & CSS</h3>
+      <p>Domino la estructura de páginas web con HTML semántico y estilos con CSS. He creado páginas responsivas, organizado secciones y aplicado buenas prácticas.</p>
+    </div>
 
-  <!-- Proyectos -->
-  <section id="projects" class="section">
-    <h2>Proyectos</h2>
-    <p>Aquí irán tus proyectos destacados</p>
-  </section>
+    <div class="categoria-bloque" data-cat="js">
+      <h3>JavaScript</h3>
+      <p>Manejo JavaScript para dar interactividad a sitios web. He trabajado con eventos, manipulación del DOM y pequeñas animaciones sin librerías.</p>
+    </div>
 
-  <!-- Habilidades -->
-  <section id="skills" class="section">
-    <h2>Habilidades</h2>
-    <ul class="skills-list">
-      <!-- Lista de habilidades -->
-    </ul>
-  </section>
+    <div class="categoria-bloque" data-cat="react">
+      <h3>React</h3>
+      <p>Estoy iniciando con React. Entiendo los componentes, props y el uso básico del estado. Estoy desarrollando pequeños proyectos para practicar.</p>
+    </div>
 
-  <!-- Contacto -->
-  <section id="contact" class="section">
-    <h2>Contacto</h2>
-    <p>Puedes escribirme a <a href="mailto:correo@ejemplo.com">correo@ejemplo.com</a></p>
-  </section>
+    <div class="categoria-bloque" data-cat="uiux">
+      <h3>Diseño UI/UX</h3>
+      <p>Tengo nociones de diseño centrado en el usuario. Cuido el contraste, la jerarquía visual y la organización de los elementos para que se vea profesional.</p>
+    </div>
 
-  <!-- Nube SVG hacia arriba -->
-  <div class="wave-container flip">
-    <svg viewBox="0 0 1440 320">
-      <path fill="#e3f2fd" fill-opacity="1" d="M0,160L80,149.3C160,139,320,117,480,106.7C640,96,800,96,960,106.7C1120,117,1280,139,1360,149.3L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
-    </svg>
+    <div class="categoria-bloque" data-cat="git">
+      <h3>Git & GitHub</h3>
+      <p>Uso Git para controlar versiones de mis proyectos. Sé clonar repositorios, hacer commits, push y pull, y colaborar en GitHub con otros estudiantes.</p>
+    </div>
+
+    <div class="categoria-bloque" data-cat="responsive">
+      <h3>Responsive Design</h3>
+      <p>Me aseguro de que mis páginas se vean bien en celulares, tablets y computadores. Uso media queries y diseño flexible con CSS Grid y Flexbox.</p>
+    </div>
   </div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>©️ 2025 Luisa - Todos los derechos reservados</p>
-  </footer>
-
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
