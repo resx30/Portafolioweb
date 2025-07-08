@@ -12,10 +12,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
-
+  <link rel="stylesheet" href="estilos.css" />
 </head>
-<body>
+</body>
+  
   <!-- Cabecera -->
   <header class="main-header">
     <div class="header-left">Luisa</div>
@@ -26,49 +26,83 @@
       <a href="#contact">Contacto</a>
     </nav>
     <div class="header-right">
-      <button class="icon-button" aria-label="Buscar">
-        <i data-feather="search"></i>
-      </button>
-      <button id="theme-toggle" class="icon-button" aria-label="Modo oscuro">
-        <i data-feather="sun" id="theme-icon"></i>
-      </button>
-    </div>
+  <button class="icon-button" aria-label="Buscar">
+    <i data-feather="search"></i>
+  </button>
+  <button id="theme-toggle" class="icon-button" aria-label="Modo oscuro">
+  <span id="theme-icon" data-feather="sun"></span>
+</button>
+</div>
   </header>
-
-
-  <!-- Hero / Portada -->
+  <!-- Contenido principal -->
   <main class="main-content">
     <section class="hero" id="about">
-      <div class="clouds"></div>
-      <h1>Hola, soy Luisa</h1>
-      <p>Apasionada por la tecnología, el diseño y las ideas que transforman.</p>
+        <div class="name-block">
+      <h1 class="name-line">LUISA</h1>
+      <h1 class="name-line">CALLE</h1>
+      <h1 class="name-line">RESTREPO</h1>
+      </div>
       <img src="img/avatar.png" alt="Avatar de Luisa" class="avatar" />
+      </div>
     </section>
-      <section id="about-info" class="about-info-section">
-        <h2>Sobre mí</h2>
-        <p>
-          Soy estudiante de Ingeniería Informática apasionada por la tecnología, el diseño y las ideas que transforman.
-          Me gusta aprender constantemente y construir experiencias digitales. <br>
-          Actualmente estoy desarrollando proyectos personales que combinan desarrollo web, diseño interactivo y automatización.
-        </p>
-       
-      </section>
 
-      <!-- Explorar por categoría -->
-  <section id="categorias" class="section">
-  <h2 class="titulo-categoria">Habilidades</h2>
-  <div class="botones-categorias">
-    <button class="btn-cat active" data-cat="htmlcss">HTML & CSS</button>
-    <button class="btn-cat" data-cat="js">JavaScript</button><br>
-    <button class="btn-cat" data-cat="react">React</button><br>
-    <button class="btn-cat" data-cat="uiux">UI/UX</button><br>
-    <button class="btn-cat" data-cat="git">Git & GitHub</button><br>
-    <button class="btn-cat" data-cat="responsive">Responsive Design</button><br>
+<!-- Sección de columnas -->
+ <section class="main-section">
+  <!-- Columna Izquierda -->
+  <div class="content-left">
+    <article class="post">
+      <h2>Sobre mí</h2>
+      <a >Hitos importantes</a>
+      <ul class="hitos">
+         <li>
+            <img src="img/computadora.svg" alt="compu" class="icono">
+            Actualmente estudiando desarrollo frontend. Enfocada en HTML, CSS, JavaScript y fundamentos de React. </li>
+         <li>
+            <img src="img/navegador (1).svg" alt="navegador" class="icono2">
+            Puedo maquetar sitios web responsivos, aplicar animaciones básicas y estructurar código limpio con buenas 
+            prácticas.</li>
+        <li>
+            <img src="img/bulbo.svg" alt="bombi" class="icono3">
+            Trabajando actualmente en mi portafolio personal, mejoranod diseño responsivo y accesibilidad.</li>
+        <li>
+            <img src="img/siguiendo.svg" alt="megu" class="icono4">
+            Me gusta crear interfaces limpias, funcionales y que transmitan profesionalismo. </li>
+      </ul>
+    </article>
+
+    <article class="post">
+      <h2>El enigma de la altura</h2>
+      <a href="#">Desentrañando porcentajes en CSS</a>
+      <p>Uno de los aspectos más desconcertantes de CSS es la altura basada en porcentajes. Aquí lo explico.</p>
+    </article>
   </div>
 
-  
+  <!-- Columna Derecha -->
+  <aside class="content-right">
+    <h3>EXPLORAR HABILIDADES</h3><br>
+    <div class="botones-categorias">
+      <button class="btn-cat active">CSS</button>
+      <button class="btn-cat">JavaScript</button> 
+      <button class="btn-cat">UI/UX</button>
+      <button class="btn-cat">React</button>
+    </div>
 
-  </main>
+    <h3>CONTENIDO POPULAR</h3>
+    <ul class="popular-list">
+      <li><a href="#">Guía de Flexbox</a></li>
+      <li><a href="#">CSS moderno</a></li>
+      <li><a href="#">Transiciones animadas</a></li>
+      <li><a href="#">Sombras hermosas</a></li>
+    </ul>
+  </aside>
+ </section>   
+</main>
+
+  <!-- JS -->
   <script src="script.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
 </body>
 </html>
+
+
+
