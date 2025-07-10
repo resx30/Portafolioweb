@@ -617,7 +617,7 @@ body.dark-mode .btn-cat {
 }
 
 .titulo-seccion {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 2rem;
   color: #000000;
   text-align: left;
@@ -676,8 +676,6 @@ body.dark-mode .btn-cat {
 }
 
 /* Modo nocturno automático */
-@media (prefers-color-scheme: dark) {
-  .titulo-seccion {
-    color: white;
-  }
+.dark-mode .titulo-seccion {
+  color: white;
 }
