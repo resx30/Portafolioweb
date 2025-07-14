@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto | Luisa Portafolio</title>
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="contacto.css" />
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="header-left">Luisa</div>
+    <nav class="nav">
+      <a href="index.htmlabout">Sobre mí</a>
+      <a href="index.html#kills">Habilidades</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <div class="header-right">
+      <button class="icon-button" aria-label="Buscar">
+        <i data-feather="search"></i>
+      </button>
+      <button id="theme-toggle" class="icon-button" aria-label="Modo oscuro">
+        <span id="theme-icon" data-feather="sun"></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="contacto-section" id="contacto">
+      <h2>Contáctame</h2>
+      <p>Estoy disponible para proyectos o colaboraciones. ¡No dudes en escribirme!</p>
+      
+      <form class="contacto-form">
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu correo electrónico" required>
+        <textarea name="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    feather.replace();
+  </script>
+</body>
+</html>
