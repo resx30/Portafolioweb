@@ -1,0 +1,192 @@
+/* Reset base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, hwb(200 56% 7%), white);
+  color: #111;
+  transition: background 0.3s, color 0.3s;
+  background-color: white;
+}
+
+/* Cabecera */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px 32px;
+  background: transparent;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.main-header.scrolled {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px); /*Desenfoque*/
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-left {
+  
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+.nav a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav a:hover {
+  color: #0077cc;
+}
+.header-right {
+  display: flex;
+  gap: 1rem;
+}
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+  color: inherit;
+  
+}
+.icon-button:hover {
+  transform: scale(1.1);
+}
+
+.header-left {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: #009ecb;
+}
+
+.header-right .icon-button {
+  background: none;
+  border: none;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.main-content {
+  padding: 2rem;
+}
+
+/* Sección */
+.habilidades-section {
+  max-width: 960px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+/* Título y descripción */
+.habilidades-section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.habilidades-section p {
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Grid de tarjetas */
+.habilidades-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+/* Tarjeta individual */
+.habilidad {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.habilidad:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+/* Íconos */
+.habilidad i {
+  width: 48px;
+  height: 48px;
+  stroke: #009ecb;
+  margin-bottom: 0.75rem;
+}
+
+/* Título y texto */
+.habilidad h3 {
+  margin: 0;
+  color: #009ecb;
+  font-size: 1.2rem;
+}
+.habilidad p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+/* Modo oscuro */
+body.modo-oscuro .habilidad {
+  background-color: #2a2a2a;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+body.modo-oscuro .habilidad i {
+  stroke: #50bde2;
+}
+body.modo-oscuro .habilidad h3 {
+  color: #50bde2;
+}
+body.modo-oscuro .habilidad p {
+  color: #ccc;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Animación de desvanecimiento */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}

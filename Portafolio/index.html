@@ -20,8 +20,8 @@
   <header class="main-header">
     <div class="header-left">Luisa</div>
     <nav class="nav">
-      <a href="about">Sobre mí</a>
-      <a href="skills">Habilidades</a>
+      <a href="index.html">Sobre mí</a>
+      <a href="habilidades.html">Habilidades</a>
       <a href="contacto.html">Contacto</a>
     </nav>
   
@@ -149,6 +149,33 @@
   <!-- JS -->
   <script src="script.js"></script>
   <script src="https://unpkg.com/feather-icons"></script>
+
+  <script>
+  // Espera a que el DOM esté listo
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll("a[href]");
+
+    links.forEach(link => {
+      link.addEventListener("click", function (e) {
+        const target = link.getAttribute("href");
+
+        // Solo animar navegación dentro del mismo dominio
+        if (target && !target.startsWith("http")) {
+          e.preventDefault(); // Detiene la navegación inmediata
+
+          // Agrega clase fade-out al body
+          document.body.classList.add("fade-out");
+
+          // Espera a que termine la animación y luego navega
+          setTimeout(() => {
+            window.location.href = target;
+          }, 500); // Coincide con el tiempo del transition
+        }
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
 

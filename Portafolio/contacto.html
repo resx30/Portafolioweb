@@ -19,36 +19,77 @@
   <header class="main-header">
     <div class="header-left">Luisa</div>
     <nav class="nav">
-      <a href="index.htmlabout">Sobre mí</a>
-      <a href="index.html#kills">Habilidades</a>
+      <a href="index.html#about">Sobre mí</a>
+      <a href="index.html#skills">Habilidades</a>
       <a href="contacto.html">Contacto</a>
     </nav>
-    <div class="header-right">
-      <button class="icon-button" aria-label="Buscar">
-        <i data-feather="search"></i>
-      </button>
-      <button id="theme-toggle" class="icon-button" aria-label="Modo oscuro">
-        <span id="theme-icon" data-feather="sun"></span>
-      </button>
-    </div>
+  <div class="header-right">
+  <button class="icon-button" aria-label="Buscar">
+    <i data-feather="search"></i>
+  </button>
+  <button id="theme-toggle" class="icon-button" aria-label="Modo oscuro">
+  <span id="theme-icon" data-feather="sun"></span>
+</button>
+</div>
   </header>
 
-  <main class="main-content">
-    <section class="contacto-section" id="contacto">
-      <h2>Contáctame</h2>
-      <p>Estoy disponible para proyectos o colaboraciones. ¡No dudes en escribirme!</p>
-      
-      <form class="contacto-form">
-        <input type="text" name="nombre" placeholder="Tu nombre" required>
-        <input type="email" name="email" placeholder="Tu correo electrónico" required>
-        <textarea name="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
-        <button type="submit">Enviar Mensaje</button>
-      </form>
-    </section>
-  </main>
+ <main class="main-content">
+  <section class="contacto-section" id="contacto">
+    <h2>Contáctame</h2>
+    <p>Estoy disponible para proyectos o colaboraciones. ¡No dudes en escribirme!</p>
 
+    <form class="contacto-form">
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Correo Electrónico</label>
+        <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+      </div>
+
+      <div class="form-group">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
+      </div>
+
+      <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+    </form>
+  </section>
+</main>
+
+  <script src="https://unpkg.com/feather-icons"></script>
   <script>
     feather.replace();
   </script>
+  <script src="script.js"></script>
+
+  <script>
+  // Espera a que el DOM esté listo
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll("a[href]");
+
+    links.forEach(link => {
+      link.addEventListener("click", function (e) {
+        const target = link.getAttribute("href");
+
+        // Solo animar navegación dentro del mismo dominio
+        if (target && !target.startsWith("http")) {
+          e.preventDefault(); // Detiene la navegación inmediata
+
+          // Agrega clase fade-out al body
+          document.body.classList.add("fade-out");
+
+          // Espera a que termine la animación y luego navega
+          setTimeout(() => {
+            window.location.href = target;
+          }, 500); // Coincide con el tiempo del transition
+        }
+      });
+    });
+  });
+</script>
+
 </body>
 </html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Habilidades | Luisa Portafolio</title>
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="habilidades.css" />
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="header-left">Luisa</div>
+    <nav class="nav">
+      <a href="index.html#about">Sobre mí</a>
+      <a href="habilidades.html">Habilidades</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <div class="header-right">
+      <button class="icon-button" aria-label="Buscar">
+        <i data-feather="search"></i>
+      </button>
+      <button id="theme-toggle" class="icon-button" aria-label="Modo oscuro">
+        <span id="theme-icon" data-feather="sun"></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="habilidades-section">
+      <h2>Habilidades Técnicas</h2>
+      <p>Estas son las tecnologías y herramientas con las que trabajo:</p>
+
+      <div class="habilidades-grid">
+        <div class="habilidad">
+          <img src="img/html.svg" alt="HTML">
+          <h3>HTML</h3>
+          <p>Estructura semántica y accesible.</p>
+        </div>
+        <div class="habilidad">
+          <img src="img/css.svg" alt="CSS">
+          <h3>CSS</h3>
+          <p>Flexbox, Grid, animaciones y diseño responsivo.</p>
+        </div>
+        <div class="habilidad">
+          <img src="img/js.svg" alt="JavaScript">
+          <h3>JavaScript</h3>
+          <p>Manejo del DOM, eventos y lógica interactiva.</p>
+        </div>
+        <div class="habilidad">
+          <img src="img/react.svg" alt="React">
+          <h3>React</h3>
+          <p>Componentes, hooks y estado.</p>
+        </div>
+        <div class="habilidad">
+          <img src="img/figma.svg" alt="Figma">
+          <h3>Animations</h3>
+          <p>Transiciones, transformaciones, animaciones suaves para mejorar experiencia.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    feather.replace();
+  </script>
+
+  <script>
+  // Espera a que el DOM esté listo
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll("a[href]");
+
+    links.forEach(link => {
+      link.addEventListener("click", function (e) {
+        const target = link.getAttribute("href");
+
+        // Solo animar navegación dentro del mismo dominio
+        if (target && !target.startsWith("http")) {
+          e.preventDefault(); // Detiene la navegación inmediata
+
+          // Agrega clase fade-out al body
+          document.body.classList.add("fade-out");
+
+          // Espera a que termine la animación y luego navega
+          setTimeout(() => {
+            window.location.href = target;
+          }, 500); // Coincide con el tiempo del transition
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

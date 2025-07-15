@@ -787,3 +787,8 @@ body.dark-mode .btn-cat {
     color: #f3f4f6; /* color claro para el texto */
 }
 
+/* Animación de desvanecimiento */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
