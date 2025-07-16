@@ -150,7 +150,7 @@ body.modo-oscuro .contacto-section {
 /* Modo oscuro para inputs y botón */
 body.modo-oscuro .contacto-form input,
 body.modo-oscuro .contacto-form textarea {
-  background-color: #3b3b3b;
+  background-color: #000000;
   color: white;
   border: 1px solid #666;
 }
@@ -172,7 +172,7 @@ body.dark-mode {
 }
 
 .main-header.scrolled {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px); /*Desenfoque*/
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -201,13 +201,14 @@ body.dark-mode .icon-button {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
-  color: #333;
+  color: #000000;
   background-color: white;
 }
 
 body.dark .about-info-section {
   color: #eee;
 }
+
 
 
 /* Navegación */
@@ -346,13 +347,13 @@ body.dark-mode .contact-form textarea:focus {
   background: rgba(60, 60, 60, 1);
 }
 
-body.dark-mode .contact-form button {
-  background-color: #ec407a;
+body.dark-mode .contacto-form button {
+  background-color: #45caff;
   color: #f3f4f6;
 }
 
-body.dark-mode .contact-section h2 {
-  color: #ec407a;
+body.dark-mode .contacto-section h2 {
+  color: #000000;
 }
 
 /* Animación entrada suave */

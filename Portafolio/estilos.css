@@ -427,11 +427,11 @@ body.dark-mode .btn-cat {
   text-align: left;
   margin-right: 20px;
   margin-top: 2rem;
-  transform: translateX(180px); /* el nombre para moverlo a al derecha*/
+  transform: translateX(70px); /* el nombre para moverlo a al derecha*/
 }
 
 .name-line {
-  font-size: 8.5rem; /* aumentar el nombre */
+  font-size: 9.5rem; /* aumentar el nombre */
   font-weight: bold;
   line-height: 1;
 
